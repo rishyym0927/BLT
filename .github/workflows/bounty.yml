@@ -16,6 +16,9 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Install dependencies
+        run: npm install @octokit/rest @slack/web-api
+
       - name: Run Bounty Bot
         env:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
