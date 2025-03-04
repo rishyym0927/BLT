@@ -1,5 +1,5 @@
-const { Octokit } = require("@octokit/rest");
-const { WebClient } = require("@slack/web-api");
+import { Octokit } from "@octokit/rest";
+import { WebClient } from "@slack/web-api";
 
 const github = new Octokit({ auth: process.env.PERSONAL_ACCESS_TOKEN });
 const slack = new WebClient(process.env.SLACK_WEBHOOK_URL);
